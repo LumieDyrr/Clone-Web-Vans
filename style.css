@@ -154,3 +154,145 @@ nav .icons button:hover {
 .dot.inactive:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px 40px 20px;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style: none;
+}
+
+.top-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
+
+.menu {
+  flex: 1;
+  align-content: center;
+  padding: 0px;
+  margin: 0;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.menu  li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+
+.menu-image {
+  flex: 1;
+  
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.menu-image .show{
+    display: block;
+}
+
+.item1:hover ~ .menu-image .img1,
+.item2:hover ~ .menu-image .img2,
+.item3:hover ~ .menu-image .img3,
+.item4:hover ~ .menu-image .img4{
+    display: block;
+}
+
+.item1:hover ~ .menu-image .img2,
+.item1:hover ~ .menu-image .img3,
+.item1:hover ~ .menu-image .img4,
+.item2:hover ~ .menu-image .img1,
+.item2:hover ~ .menu-image .img3,
+.item2:hover ~ .menu-image .img4,
+.item3:hover ~ .menu-image .img1,
+.item3:hover ~ .menu-image .img2,
+.item3:hover ~ .menu-image .img4,
+.item4:hover ~ .menu-image .img1,
+.item4:hover ~ .menu-image .img2,
+.item4:hover ~ .menu-image .img3 {
+  display: none;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.category {
+  flex: 1;
+  position: relative;  
+  overflow: hidden;
+}
+
+.category img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+ .category .label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+.category .label:hover{
+    text-decoration:dashed;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-image {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .categories {
+    position: relative;
+  }
+
+  .category img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+}
